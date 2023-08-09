@@ -1,0 +1,136 @@
+body {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto 70px  auto;
+  width: 90%;
+  max-width: 1000px;
+}
+header > h1 {
+  color: darkgreen;
+  text-align: center;
+  font-weight: 900;
+  font-size: 3em;
+  margin: 0.3em 0;
+}
+
+main {
+  background-color: black;
+  background-image: url(/images/background.jpg);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 50px;
+}
+
+.searchField {
+  display: flex;
+  border: solid 1px lightgray;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: white;
+  width: 70%;
+  min-width: 400px;
+}
+.searchField > input {
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  font-size: 14pt;
+}
+.searchField > input::placeholder {
+  color: lightgray;
+}
+
+.card {
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 40%;
+  background-color: #354338f2;
+  color: white;
+  gap: 10px;
+}
+.card > img {
+  width: 150px;
+  height: 150px;
+}
+.cardData {
+  display: flex;
+  font-size: 8pt;
+  font-weight: 700;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  text-align: left;
+}
+.cardTitle > * {
+  padding: 0;
+  margin: 0;
+}
+.cardTitle > h2 {
+  font-weight: bolder;
+}
+.cardTitle > div > span {
+  vertical-align: middle;
+}
+.cardTitle > div > .statusIcon {
+  font-size: 1.5em;
+}
+.cardInfo > * {
+  padding: 0;
+  margin: 0;
+}
+.cardInfo > h4 {
+  color: #858585;
+  margin-bottom: 5px;
+}
+
+#pagination {
+  color: white;
+  padding: 10px;
+  background-color: #354338f2;
+  display: inline-block;
+  border-radius: 5px;
+  margin: 10px;
+}
+#pagination a {
+  color: #98b19d;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer {
+  background-color: #1f2821;
+  color: darkgray;
+  text-align: center;
+  font-size: 0.75rem;
+  padding: 20px 0;
+}
+footer > .counters {
+  margin: 61px 0;
+}
+footer > .counters > span {
+  margin: 0 20px;
+}
+footer > .developer {
+  margin-top: 100px;
+}
+footer > .developer > em {
+  font-style: normal;
+  color: white;
+}

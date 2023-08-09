@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./index.js" type="module" defer></script>
+  <title>Frontend for Rick & Morty API</title>
+</head>
+<body>
+
+  <header>
+    <h1>Rick and Morty API</h1>
+    <div class="searchField">
+      <input type="text" id="search" placeholder="Search for a character">
+      <img src="./images/icon_search.svg" alt="search icon">
+    </div>
+  </header>
+
+  <main>
+    <section id="cards"></section>
+    <section id="pagination"></section>
+  </main>
+
+  <footer>
+    <div class="counters">
+      <span id="counterCharacters">CHARACTERS: XX</span>
+      <span id="counterLocations">LOCATIONS: XX</span>
+      <span id="counterEpisodes">EPISODES: XX</span>
+    </div>
+    <p class="developer">Developed by: <em>Sérgio C Castelani Jr</em> em 2023</p>
+  </footer>
+  
+</body>
+</html>
