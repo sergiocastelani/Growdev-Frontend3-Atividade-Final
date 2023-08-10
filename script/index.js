@@ -172,5 +172,31 @@ searchInput.addEventListener('keyup', (event) =>
 //
 window.showCharacter = function(id)
 {
-  openModal('characterModal');
+  axios.get("https://rickandmortyapi.com/api/character/"+id)
+    .then(response => {
+      let character = response.data;
+
+      let statusColor = '#858585';
+      if (character.status === 'Dead')
+        statusColor = 'red';
+      else if (character.status === 'Alive')
+        statusColor = 'limegreen';
+
+      document.getElementById('modalCharName').innerHTML = character.name;
+      document.getElementById('modalAvatar').src = character.image;
+      document.getElementById('modalStatusIcon').style.color = statusColor;
+      document.getElementById('modalStatus').innerHTML = character.status === "unknown" ? 'Unknown' : character.status;
+      document.getElementById('modalSpecies').innerHTML = character.species;
+      document.getElementById('modalType').innerHTML = character.type ? character.type : "-";
+      document.getElementById('modalGender').innerHTML = character.gender === "unknown" ? 'Unknown' : character.gender;
+      document.getElementById('modalOrigin').innerHTML = character.origin.name === "unknown" ? 'Unknown' : character.origin.name;
+      document.getElementById('modalLastLocation').innerHTML = character.location.name === "unknown" ? 'Unknown' : character.location.name;
+
+      openModal('characterModal');
+    })
+    .catch(error => {
+      alert("Some error occured while fetting character data. Check the console log.")
+      console.log(error);
+    })
+
 }
