@@ -114,7 +114,7 @@ axios.get(apiURL.href)
         statusColor = 'limegreen';
 
       cards += `
-<div class="card" onclick="showCharacter(${character.id})">
+<div class="card animate__animated animate__fadeIn" onclick="showCharacter(${character.id})">
   <img src="${character.image}" alt="${character.name} image">
   <div class="cardData">
     

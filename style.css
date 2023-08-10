@@ -64,6 +64,7 @@ main {
   background-color: #354338f2;
   color: white;
   gap: 10px;
+  --animate-duration: 500ms;
 }
 .card > img {
   width: 150px;
