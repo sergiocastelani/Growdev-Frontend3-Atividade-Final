@@ -3,11 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./modal.css">
+
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script src="./index.js" type="module" defer></script>
-  <title>Frontend for Rick & Morty API</title>
+  <script src="./script/index.js" type="module" defer></script>
+  <script src="./script/modal.js" defer></script>
 </head>
+
 <body>
 
   <header>
@@ -31,6 +35,43 @@
     </div>
     <p class="developer">Developed by: <em>Sérgio C Castelani Jr</em> em 2023</p>
   </footer>
+
+  <!-- modal  -->
+  <div id="characterModal" class="modal">
+    <div class="modalDialog">
+      <div class="modalHeader">
+        <img class="modalAvatar" src="https://rickandmortyapi.com/api/character/avatar/696.jpeg"/>
+        <h1>Nome do char</h1>
+        <div>
+          <span class="statusIcon" style="color: red">&#x25cf;</span>
+          <span>Unknown</span>
+        </div>
+      </div>
+
+      <div class="modalBody">
+        <section>
+          <h4>Species</h4>
+          <p>Robot</p>
+        </section>
+        <section>
+          <h4>Type</h4>
+          <p>Decoy</p>
+        </section>
+        <section>
+          <h4>Gender</h4>
+          <p>Male</p>
+        </section>
+        <section>
+          <h4>Origin</h4>
+          <p>Earth (Replacement Dimension)</p>
+        </section>
+        <section>
+          <h4>Last location</h4>
+          <p>Earth (Replacement Dimension)</p>
+        </section>
+      </div>
+    </div>
+  </div>
   
 </body>
 </html>

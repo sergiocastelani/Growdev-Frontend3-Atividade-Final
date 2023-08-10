@@ -32,7 +32,6 @@ async function fillLocations()
 {
   if (! locations)
   {
-    console.log("fsadfjslkdfjslkdj ")
     locations = {};
     let count = 0;
 
@@ -115,7 +114,7 @@ axios.get(apiURL.href)
         statusColor = 'limegreen';
 
       cards += `
-<div class="card">
+<div class="card" onclick="showCharacter(${character.id})">
   <img src="${character.image}" alt="${character.name} image">
   <div class="cardData">
     
@@ -151,23 +150,27 @@ axios.get(apiURL.href)
     console.log(error);
   });
 
-  //search input event
-  let searchInput = document.getElementById('search');
-  searchInput.addEventListener('keyup', (event) =>
-  {
-    if (event.key !== "Enter" )
-      return;
+//search input event
+let searchInput = document.getElementById('search');
+searchInput.addEventListener('keyup', (event) =>
+{
+  if (event.key !== "Enter" )
+    return;
 
-    let currentURL = new URL(window.location.href);
-    currentURL.searchParams.set('page', 1);
+  let currentURL = new URL(window.location.href);
+  currentURL.searchParams.set('page', 1);
 
-    let searchValue = document.getElementById('search').value;
-    if (searchValue)
-      currentURL.searchParams.set('search', searchValue);
-    else
-      currentURL.searchParams.delete('search');
+  let searchValue = document.getElementById('search').value;
+  if (searchValue)
+    currentURL.searchParams.set('search', searchValue);
+  else
+    currentURL.searchParams.delete('search');
 
-    window.location.href = currentURL.href;
-  });  
+  window.location.href = currentURL.href;
+});  
 
-  
+//
+window.showCharacter = function(id)
+{
+  openModal('characterModal');
+}
