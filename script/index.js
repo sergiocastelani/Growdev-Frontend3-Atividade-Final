@@ -58,6 +58,14 @@ function createPagination(apiInfo)
 {
   const nextPage = apiInfo.next;
   const prevPage = apiInfo.prev;
+  const paginationElement = document.getElementById('pagination');
+
+  if (! (nextPage || prevPage)) 
+  {
+    paginationElement.style.visibility = 'hidden';
+    return;
+  }
+  paginationElement.style.visibility = 'visible';
 
   const nextPageNumberMatch = nextPage?.match(/page=(\d+)/);
   const prevPageNumberMatch = prevPage?.match(/page=(\d+)/);
@@ -81,7 +89,7 @@ function createPagination(apiInfo)
     paginationContent += ` &nbsp; <a href="${currentURL.href}"> ${currentPageNumber + 1} &gt; </a>`;
   }
 
-  document.getElementById('pagination').innerHTML = paginationContent;
+  paginationElement.innerHTML = paginationContent;
 }
 
 await fillEpisodes();

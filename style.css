@@ -108,6 +108,7 @@ main {
   display: inline-block;
   border-radius: 5px;
   margin: 10px;
+  visibility: hidden;
 }
 #pagination a {
   color: #98b19d;
