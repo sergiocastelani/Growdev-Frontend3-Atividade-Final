@@ -44,15 +44,27 @@ main {
   padding: 5px 10px;
   background-color: white;
   width: 70%;
+  transition: 0.2s;
 }
-.searchField > input {
+.searchField:focus-within {
+  box-shadow: 0px 0px 3px 0px rgb(48 99 23), 0px 0px 9px 0px rgb(48 99 23);
+}
+.searchField input {
   border: none;
   outline: none;
   flex-grow: 1;
   font-size: 14pt;
+  color: #306317;
 }
-.searchField > input::placeholder {
+.searchField input::placeholder {
   color: lightgray;
+}
+.searchField svg {
+  transition: 0.2s;
+  fill: lightgray;
+}
+.searchField input:focus +svg {
+  fill: #306317;
 }
 
 .card {
@@ -136,6 +148,15 @@ footer > .developer > em {
   font-style: normal;
   color: white;
 }
+
+/* utils */
+
+.filter-green{
+  fill: red;
+  /* filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%); */
+}
+
+/* media sizes */
 
 @media (max-width: 1080px) {
 
