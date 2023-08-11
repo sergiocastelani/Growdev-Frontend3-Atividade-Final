@@ -11,6 +11,7 @@
   background-color: rgb(0 0 0 / 60%);
   overflow: hidden;
   --animate-duration: 300ms;
+  z-index: 100;
 }
 
 .modalDialog {

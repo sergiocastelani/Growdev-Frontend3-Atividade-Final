@@ -122,7 +122,7 @@ axios.get(apiURL.href)
         statusColor = 'limegreen';
 
       cards += `
-<div class="card animate__animated animate__fadeIn" onclick="showCharacter(${character.id})">
+<div class="card animate__animated animate__zoomIn" onclick="showCharacter(${character.id})">
   <img src="${character.image}" alt="${character.name} image">
   <div class="cardData">
     
@@ -153,6 +153,14 @@ axios.get(apiURL.href)
     document.getElementById('counterCharacters').innerHTML = "CHARACTERS: " + response.data.info.count;
 
     createPagination(response.data.info);
+
+    //removes initial animation after page loaded
+    setTimeout(() => {
+      document.querySelectorAll(".card").forEach(card => {
+        card.classList.remove("animate__animated");
+        card.classList.remove("animate__zoomIn");
+      });
+    }, 1500);
   })
   .catch(function(error) {
     console.log(error);

@@ -74,8 +74,14 @@ main {
   width: 40%;
   background-color: #354338f2;
   color: white;
-  
-  --animate-duration: 500ms;
+  cursor: pointer;
+  z-index: 0;
+  --animate-duration: 0.5s; /* Animate.css timing */
+  transition: transform 0.5s;
+}
+.card:hover {
+  z-index: 1;
+  transform: scale(1.1);
 }
 .card > img {
   width: 190px;
@@ -198,3 +204,14 @@ footer > .developer > em {
   }  
 }
 
+/* animations */
+@keyframes hoverScale {
+  from {
+    z-index: 10;
+    transform: scale(1);
+  }
+  to {
+    z-index: 10;
+    transform: scale(1.1);
+  }
+}
