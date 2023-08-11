@@ -164,6 +164,7 @@ axios.get(apiURL.href)
   })
   .catch(function(error) {
     console.log(error);
+    document.getElementById("imgLoading").style.display = "none";
   });
 
 //search input event
