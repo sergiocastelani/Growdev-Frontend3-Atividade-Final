@@ -63,3 +63,15 @@
   }  
 }
 
+@media (max-height: 730px) {
+  .modalDialog {
+    font-size: 10pt;
+  }
+  .modalDialog img {
+    max-width: 200px;
+  }
+  .modalBody {
+    gap: 0;
+  }
+}
+
