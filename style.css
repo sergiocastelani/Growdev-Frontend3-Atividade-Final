@@ -44,7 +44,6 @@ main {
   padding: 5px 10px;
   background-color: white;
   width: 70%;
-  min-width: 400px;
 }
 .searchField > input {
   border: none;
@@ -63,21 +62,21 @@ main {
   width: 40%;
   background-color: #354338f2;
   color: white;
-  gap: 10px;
+  
   --animate-duration: 500ms;
 }
 .card > img {
-  width: 150px;
-  height: 150px;
+  width: 190px;
 }
 .cardData {
   display: flex;
-  font-size: 8pt;
+  font-size: 10pt;
   font-weight: 700;
   flex-direction: column;
   justify-content: center;
-  gap: 15px;
   text-align: left;
+  gap: 15px;
+  padding: 10px;
 }
 .cardTitle > * {
   padding: 0;
@@ -127,7 +126,8 @@ footer > .counters {
   margin: 61px 0;
 }
 footer > .counters > span {
-  margin: 0 20px;
+  display: inline-block;
+  margin: 5px 20px;
 }
 footer > .developer {
   margin-top: 100px;
@@ -136,3 +136,44 @@ footer > .developer > em {
   font-style: normal;
   color: white;
 }
+
+@media (max-width: 1080px) {
+
+  .card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cardData {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    background-color: #405344;
+    flex-grow: 1;
+  }
+  
+}
+
+@media (max-width: 580px) {
+
+  .card img {
+    width: 100%
+  }
+  .cardData {
+    display: none;
+  }
+  
+  footer > .counters > span {
+    margin: 5px 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .searchField input {
+    width: 100%;
+  }  
+  .searchField img {
+    display: none;
+  }  
+}
+
