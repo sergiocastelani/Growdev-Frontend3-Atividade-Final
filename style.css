@@ -203,15 +203,3 @@ footer > .developer > em {
     display: none;
   }  
 }
-
-/* animations */
-@keyframes hoverScale {
-  from {
-    z-index: 10;
-    transform: scale(1);
-  }
-  to {
-    z-index: 10;
-    transform: scale(1.1);
-  }
-}
