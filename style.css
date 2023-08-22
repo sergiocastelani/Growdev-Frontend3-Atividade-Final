@@ -5,6 +5,13 @@ body {
   text-align: center;
 }
 
+#logo-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+}
+
 header {
   display: flex;
   flex-direction: column;
