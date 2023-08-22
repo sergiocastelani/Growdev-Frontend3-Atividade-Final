@@ -29,6 +29,7 @@ header > h1 {
 }
 
 main {
+  padding-bottom: 50vw;
   background-color: black;
   background-image: url(/images/background.jpg);
   background-position: center bottom;
