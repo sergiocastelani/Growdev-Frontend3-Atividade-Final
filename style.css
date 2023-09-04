@@ -42,7 +42,7 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  padding: 50px;
+  padding: 50px 10px;
 }
 
 .searchField {
@@ -171,6 +171,22 @@ footer > .developer > em {
 }
 
 /* media sizes */
+
+@media (min-width: 1550px) {
+
+  .card {
+    width: 30%;
+  }
+
+}
+
+@media (min-width: 2000px) {
+
+  .card {
+    width: 20%;
+  }
+
+}
 
 @media (max-width: 1080px) {
 
