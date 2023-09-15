@@ -126,7 +126,7 @@ main {
   margin-bottom: 5px;
 }
 
-#pagination {
+.pagination {
   color: white;
   padding: 10px;
   background-color: #354338f2;
@@ -135,7 +135,7 @@ main {
   margin: 10px;
   visibility: hidden;
 }
-#pagination a {
+.pagination a {
   color: #98b19d;
   font-weight: bold;
   text-decoration: none;
